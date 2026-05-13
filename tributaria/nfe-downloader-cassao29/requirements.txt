@@ -1,0 +1,27 @@
+# Dependências do nfe-downloader — baixar NF-e da SEFAZ via Distribuição DF-e
+# Instalar com: pip install -r requirements.txt
+#
+# Python 3.10 ou superior recomendado.
+
+# Cliente HTTP com suporte a certificado PKCS12 (A1)
+requests>=2.31.0
+requests-pkcs12>=1.16
+
+# Parsing XML (seguro contra XXE/DoS)
+lxml>=4.9.0
+defusedxml>=0.7.1
+
+# Criptografia (PKCS12, leitura de certificado A1)
+cryptography>=41.0.0
+
+# Carregamento de variáveis de ambiente
+python-dotenv>=1.0.0
+
+# Lock cross-process cross-platform (POSIX flock + Windows LockFileEx)
+filelock>=3.13.0
+
+# UI didática no terminal (cores, barras de progresso, tabelas)
+rich>=13.7.0
+
+# Utilitários de data
+python-dateutil>=2.8.0
