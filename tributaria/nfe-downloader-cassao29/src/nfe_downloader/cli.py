@@ -115,11 +115,16 @@ def _make_client_or_exit(as_json: bool) -> SEFAZClient:
 def cmd_info(args, as_json: bool):
     """Mostra a configuração atual carregada do .env (sem expor senhas)."""
     import os
+    from pathlib import Path
 
     try:
         from dotenv import load_dotenv
 
-        load_dotenv()
+        env_file = os.environ.get("CONTAB_ENV_FILE")
+        if env_file:
+            load_dotenv(env_file)
+        elif Path(".env").exists():
+            load_dotenv()
     except ImportError:
         pass
 

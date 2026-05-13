@@ -22,6 +22,3 @@ filelock>=3.13.0
 
 # UI didática no terminal (cores, barras de progresso, tabelas)
 rich>=13.7.0
-
-# Utilitários de data
-python-dateutil>=2.8.0

@@ -28,7 +28,6 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any
 from defusedxml.ElementTree import fromstring as safe_xml_fromstring
 from defusedxml.ElementTree import ParseError as XMLParseError
-import json
 import sqlite3
 from contextlib import contextmanager
 
@@ -40,7 +39,6 @@ from filelock import FileLock
 
 from .masking import mask_chave, mask_cnpj
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
@@ -193,7 +191,7 @@ class SEFAZClient:
         except ValueError:
             raise ValueError(
                 f"SEFAZ_UF deve ser código IBGE numérico (ex: 35 para SP), "
-                f"recebido: {uf_raw!r}. Veja a tabela em INICIO-RAPIDO.md."
+                f"recebido: {uf_raw!r}. Veja a tabela completa em .env.example."
             )
 
         missing = []
