@@ -1,0 +1,23 @@
+# Ignorar a pasta antiga de skills (migrada para a nova estrutura)
+skills/
+
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações de IDE
+.vscode/
+.idea/
+
+# Variáveis de ambiente
+.env
+
+# Arquivos de sistema
+Thumbs.db
+.DS_Store
